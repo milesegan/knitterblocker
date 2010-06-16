@@ -1,5 +1,10 @@
 body
 {
+    margin: 0; padding: 1em;
 }
 
-#pattern td { width: 20px; height: 20px; }
+#canvas { float: left; margin-right: 10px; }
+
+#pattern td { width: 20px; height: 20px; border: 1px solid #bbb; }
+
+#controls a { display: block }
