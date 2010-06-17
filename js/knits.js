@@ -27,6 +27,10 @@ function paint() {
     }
 }
 
+function current_color() {
+    return $("#palette a.current").css("background");
+}
+
 function toggle_cell(e) {
     e = $(e);
     var color = $("#palette a.current").css("background");
@@ -72,6 +76,12 @@ function clear_all() {
     paint();
 }
 
+function clear_to_current() {
+    var color = current_color();
+    $("#pattern td").css("background", color);
+    paint();
+}
+
 function select_color() {
     $("#palette a").removeClass("current");
     $(this).addClass("current");
@@ -91,6 +101,7 @@ $(document).ready(function () {
     $("#add-row").click(add_row);
     $("#remove-row").click(remove_row);
     $("#clear-all").click(clear_all);
+    $("#clear-to-current").click(clear_to_current);
     $("#palette a").click(select_color);
 
     paint();
