@@ -29,11 +29,13 @@ function paint() {
 
 function toggle_cell(e) {
     e = $(e);
-    if (e.css("background") == "black") {
-        e.css("background", "white");
+    var color = $("#palette a.current").css("background");
+    var background = $("#palette a:first-child").css("background");
+    if (e.css("background") == color) {
+        e.css("background", background);
     }
     else {
-        e.css("background", "black");
+        e.css("background", color);
     }
 }
 
@@ -65,6 +67,16 @@ function remove_row() {
     paint();
 }
 
+function clear_all() {
+    $("#pattern td").css("background", "white");
+    paint();
+}
+
+function select_color() {
+    $("#palette a").removeClass("current");
+    $(this).addClass("current");
+}
+
 $(document).ready(function () {
     var canvas = $('#canvas').get(0);
     var pattern = $("#pattern");
@@ -78,6 +90,8 @@ $(document).ready(function () {
     $("#remove-column").click(remove_column);
     $("#add-row").click(add_row);
     $("#remove-row").click(remove_row);
+    $("#clear-all").click(clear_all);
+    $("#palette a").click(select_color);
 
     paint();
 });

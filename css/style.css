@@ -1,10 +1,19 @@
-body
-{
+body {
     margin: 0; padding: 1em;
+    font-family: sans-serif;
 }
 
-#canvas { float: left; margin-right: 10px; }
+#canvas { float: left; margin-right: 10px; border: 1px solid #bbb; }
 
 #pattern td { width: 20px; height: 20px; border: 1px solid #bbb; }
 
 #controls a { display: block }
+
+#palette { margin: 20px }
+#palette a { 
+    padding: 5px 10px; 
+    text-decoration: none;
+    border: 1px solid #bbb; 
+    border-radius: 5px;
+}
+#palette a.current { border: 3px solid yellow; }
