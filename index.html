@@ -2,80 +2,95 @@
 
 <html>
 
-<head>
-  <title>knitterblocker!</title>
-  <script src="js/jquery-1.4.2.js" type="text/javascript"></script>
-  <script src="js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
-  <script src="js/knits.js" type="text/javascript"></script>
-  <link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.8.2.custom.css" type="text/css"/>
-  <link rel="stylesheet" href="css/style.css" type="text/css"/>
-</head>
+  <head>
+    <title>knitterblocker!</title>
+    <script src="js/jquery-1.4.2.js" type="text/javascript"></script>
+    <script src="js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+    <script src="js/knits.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/sunny/jquery-ui-1.8.2.custom.css" type="text/css"/>
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+  </head>
 
-<body>
-  <canvas id="canvas" width="700" height="600"></canvas>
+  <body>
+    <h1>knitterblocker!</h1>
 
-  <table id="pattern">
-    <tr>
-      <td style="background: white"></td>
-      <td style="background: white"></td>
-      <td style="background: black"></td>
-      <td style="background: white"></td>
-      <td style="background: white"></td>
-    </tr>
-    <tr>
-      <td style="background: white"></td>
-      <td style="background: black"></td>
-      <td style="background: black"></td>
-      <td style="background: black"></td>
-      <td style="background: white"></td>
-    </tr>
-    <tr>
-      <td style="background: white"></td>
-      <td style="background: white"></td>
-      <td style="background: black"></td>
-      <td style="background: white"></td>
-      <td style="background: white"></td>
-    </tr>
-    <tr>
-      <td style="background: black"></td>
-      <td style="background: white"></td>
-      <td style="background: white"></td>
-      <td style="background: white"></td>
-      <td style="background: black"></td>
-    </tr>
-    <tr>
-      <td style="background: black"></td>
-      <td style="background: black"></td>
-      <td style="background: white"></td>
-      <td style="background: black"></td>
-      <td style="background: black"></td>
-    </tr>
-    <tr>
-      <td style="background: black"></td>
-      <td style="background: black"></td>
-      <td style="background: white"></td>
-      <td style="background: black"></td>
-      <td style="background: black"></td>
-    </tr>
-  </table>
+    <canvas id="canvas" width="700" height="600"></canvas>
 
-  <div id="palette">
-    <a href="#" style="background: white">1</a>
-    <a href="#" style="background: black" class="current">2</a>
-    <a href="#" style="background: red">3</a>
-    <a href="#" style="background: blue">4</a>
-    <a href="#" style="background: yellow">5</a>
-    <a href="#" style="background: green">6</a>
-  </div>
+    <div id="palette">
+      <a href="#" style="background: white">1</a>
+      <a href="#" style="background: black; color: white;" class="current">2</a>
+      <a href="#" style="background: red">3</a>
+      <a href="#" style="background: blue">4</a>
+      <a href="#" style="background: yellow">5</a>
+      <a href="#" style="background: green">6</a>
+    </div>
 
-  <div id="controls">
-    <a href="#" id="add-row">add row</a>
-    <a href="#" id="remove-row">remove row</a>
-    <a href="#" id="add-column">add column</a>
-    <a href="#" id="remove-column">remove column</a>
-    <a href="#" id="clear-all">clear pattern</a>
-    <a href="#" id="clear-to-current">clear to current color</a>
-  </div>
-</body>
+    <div class="controls ui-widget">
+      <a href="#" id="remove-row" class="ui-state-default ui-corner-all" title="remove row">
+        <span class="ui-icon ui-icon-arrowthick-1-n"></span>
+      </a>
+      <a href="#" id="add-row" class="ui-state-default ui-corner-all" title="add row">
+        <span class="ui-icon ui-icon-arrowthick-1-s"></span>
+      </a>
+      <a href="#" id="remove-column" class="ui-state-default ui-corner-all" title="remove column">
+        <span class="ui-icon ui-icon-arrowthick-1-w"></span>
+      </a>
+      <a href="#" id="add-column" class="ui-state-default ui-corner-all" title="add column">
+        <span class="ui-icon ui-icon-arrowthick-1-e"></span>
+      </a>
+      <a href="#" id="clear-all" class="ui-state-default ui-corner-all" title="clear pattern">
+        <span class="ui-icon ui-icon-radio-on"></span>
+      </a>
+      <a href="#" id="clear-to-current" class="ui-state-default ui-corner-all" title="clear to current color">
+        <span class="ui-icon ui-icon-radio-off"></span>
+      </a>
+    </div>
+
+    <table id="pattern">
+      <tr>
+        <td style="background: white"></td>
+        <td style="background: white"></td>
+        <td style="background: black"></td>
+        <td style="background: white"></td>
+        <td style="background: white"></td>
+      </tr>
+      <tr>
+        <td style="background: white"></td>
+        <td style="background: black"></td>
+        <td style="background: black"></td>
+        <td style="background: black"></td>
+        <td style="background: white"></td>
+      </tr>
+      <tr>
+        <td style="background: white"></td>
+        <td style="background: white"></td>
+        <td style="background: black"></td>
+        <td style="background: white"></td>
+        <td style="background: white"></td>
+      </tr>
+      <tr>
+        <td style="background: black"></td>
+        <td style="background: white"></td>
+        <td style="background: white"></td>
+        <td style="background: white"></td>
+        <td style="background: black"></td>
+      </tr>
+      <tr>
+        <td style="background: black"></td>
+        <td style="background: black"></td>
+        <td style="background: white"></td>
+        <td style="background: black"></td>
+        <td style="background: black"></td>
+      </tr>
+      <tr>
+        <td style="background: black"></td>
+        <td style="background: black"></td>
+        <td style="background: white"></td>
+        <td style="background: black"></td>
+        <td style="background: black"></td>
+      </tr>
+    </table>
+
+  </body>
 
 </html>

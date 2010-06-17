@@ -3,17 +3,21 @@ body {
     font-family: sans-serif;
 }
 
+h1 { margin: 0; color: #36f }
 #canvas { float: left; margin-right: 10px; border: 1px solid #bbb; }
 
+*#pattern { position: absolute; top: 150px; left: 750px; }
 #pattern td { width: 20px; height: 20px; border: 1px solid #bbb; }
 
-#controls a { display: block }
+.controls a { border-radius: 5px; margin: 2px; padding: 4px; float: left; }
 
 #palette { margin: 20px }
 #palette a { 
-    padding: 5px 10px; 
+    padding: 5px 10px;
     text-decoration: none;
-    border: 1px solid #bbb; 
-    border-radius: 5px;
+    font-weight: bold;
+    border: 3px solid #999;
+    border-radius: 1em;
+    color: black;
 }
-#palette a.current { border: 3px solid yellow; }
+#palette a.current { border: 2px dotted yellow; }
