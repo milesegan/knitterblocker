@@ -87,6 +87,15 @@ function select_color() {
     $(this).addClass("current");
 }
 
+function handle_key(event) {
+    if (event.keyCode >= 49 && event.keyCode <= 55) {
+        event.preventDefault();
+        var color = $("#palette a").get(event.keyCode - 49);
+        $("#palette a").removeClass("current");
+        $(color).addClass("current");
+    }
+}
+
 $(document).ready(function () {
     var canvas = $('#canvas').get(0);
     var pattern = $("#pattern");
@@ -103,6 +112,7 @@ $(document).ready(function () {
     $("#clear-all").click(clear_all);
     $("#clear-to-current").click(clear_to_current);
     $("#palette a").click(select_color);
+    $(document).keypress(handle_key);
 
     paint();
 });
