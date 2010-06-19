@@ -76,7 +76,7 @@ function clear_all() {
     paint();
 }
 
-function clear_to_current() {
+function fill_color() {
     var color = current_color();
     $("#pattern td").css("background", color);
     paint();
@@ -110,7 +110,7 @@ $(document).ready(function () {
     $("#add-row").click(add_row);
     $("#remove-row").click(remove_row);
     $("#clear-all").click(clear_all);
-    $("#clear-to-current").click(clear_to_current);
+    $("#fill-color").click(fill_color);
     $("#palette a").click(select_color);
     $(document).keypress(handle_key);
 

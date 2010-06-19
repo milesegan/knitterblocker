@@ -1,23 +1,24 @@
 body {
-    margin: 0; padding: 1em;
-    font-family: sans-serif;
+   width: 1000px;
+   margin: 0 auto; padding: 1em;
+   font-family: sans-serif;
 }
 
-h1 { margin: 0; color: #36f }
-#canvas { float: left; margin-right: 10px; border: 1px solid #bbb; }
+h1 { margin: 0 0 0.25em 0; color: #36f; text-align: center; }
+a { text-decoration: none }
+#canvas { float: right; margin-right: 10px; border: 1px solid #bbb; }
 
-*#pattern { position: absolute; top: 150px; left: 750px; }
+#pattern { margin: 0 auto; }
 #pattern td { width: 20px; height: 20px; border: 1px solid #bbb; }
 
-.controls a { border-radius: 5px; margin: 2px; padding: 4px; float: left; }
+.controls { text-align: center; margin: 0.5em 0 }
 
-#palette { margin: 20px }
+#palette { margin: 20px; text-align: center; }
 #palette a { 
-    padding: 5px 10px;
-    text-decoration: none;
-    font-weight: bold;
-    border: 3px solid #999;
-    border-radius: 1em;
-    color: black;
+   padding: 2px 8px;
+   font-weight: normal;
+   border: 3px solid #ccc;
+   border-radius: 1em;
+   color: black;
 }
-#palette a.current { border: 2px dotted yellow; }
+#palette a.current { border: 3px solid black; font-weight: bold; }
