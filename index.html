@@ -1,5 +1,22 @@
 <!html>
 
+<!--
+   This file is part of Knitterblocker.
+
+   Knitterblocker is free software: you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation, either version 3 of the License, or
+   (at your option) any later version.
+
+   Knitterblocker is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with Knitterblocker.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
 <html>
 
   <head>
@@ -25,29 +42,30 @@
       <a href="#" style="background: #03ca03">6</a>
     </div>
 
-    <div class="controls">
-      <a href="#" id="remove-row" title="remove row">
-        <image src="images/001_24.png">
-      </a>
-      <a href="#" id="add-row" title="add row">
-        <image src="images/001_22.png">
-      </a>
-      <a href="#" id="remove-column" title="remove column">
-        <image src="images/001_23.png">
-      </a>
-      <a href="#" id="add-column" title="add column">
-        <image src="images/001_21.png">
-      </a>
-      <a href="#" id="clear-all" title="clear all">
-        <image src="images/001_05.png">
-      </a>
-      <a href="#" id="fill-color" title="fill pattern with current color">
-        <image src="images/001_03.png">
-      </a>
-    </div>
+    <div id="pattern">
 
-    <div id="patternbox">
-      <table id="pattern">
+      <div class="controls">
+        <a href="#" class="remove-row" title="remove row">
+          <image src="images/001_24.png">
+        </a>
+        <a href="#" class="add-row" title="add row">
+          <image src="images/001_22.png">
+        </a>
+        <a href="#" class="remove-column" title="remove column">
+          <image src="images/001_23.png">
+        </a>
+        <a href="#" class="add-column" title="add column">
+          <image src="images/001_21.png">
+        </a>
+        <a href="#" class="clear-all" title="clear all">
+          <image src="images/001_05.png">
+        </a>
+        <a href="#" class="fill-color" title="fill pattern with current color">
+          <image src="images/001_03.png">
+        </a>
+      </div>
+
+      <table class="grid">
         <tr>
           <td style="background: white"></td>
           <td style="background: white"></td>
@@ -84,13 +102,14 @@
           <td style="background: black"></td>
         </tr>
         <tr>
-          <td style="background: black"></td>
+          <td style="background: white"></td>
           <td style="background: black"></td>
           <td style="background: white"></td>
           <td style="background: black"></td>
-          <td style="background: black"></td>
+          <td style="background: white"></td>
         </tr>
       </table>
+
     </div>
 
   </body>
