@@ -18,10 +18,11 @@ along with Knitterblocker.  If not, see <http://www.gnu.org/licenses/>.
 body {
    width: 1000px;
    margin: 0 auto; padding: 1em;
-   font-family: sans-serif;
+   font-size: 16px;
+   font-family: "Reenie Beanie", arial, sans-serif;
 }
 
-h1 { margin: 0 0 0.25em 0; color: #36f; text-align: center; }
+h1 { margin: 0 0 0.1em 0; font-size: 300%; color: #36f; text-align: center; }
 a { text-decoration: none }
 img { border: 0 }
 #canvas { 
@@ -31,22 +32,23 @@ img { border: 0 }
 }
 
 #pattern .grid { border-collapse: separate; margin: 0 auto; }
-#pattern td { 
+#pattern .grid td { 
    width: 20px; height: 20px; 
    border: 1px solid #bbb;
 }
-#pattern th { 
-   font-weight: normal; font-size: small; color: #888;
+#pattern .grid th { 
+   font-weight: normal; color: #777; font-size: 130%;
 }
-#pattern th:first-child { padding: 0 0.5em }
+#pattern .grid th:first-child { padding: 0 0.5em }
 
 .controls { text-align: center; margin: 0.5em 0 }
 
 #palette { margin: 20px; text-align: center; }
 #palette a { 
-   padding: 4px 10px;
-   margin: 0 3px;
+   padding: 0.1em 0.45em;
+   margin: 0 0.1em;
    font-weight: normal;
+   font-size: 150%;
    -webkit-border-radius: 1em;
    -moz-border-radius: 1em;
    -webkit-box-shadow: 2px 2px 5px #ccc;
