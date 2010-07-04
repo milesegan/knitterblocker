@@ -112,32 +112,45 @@ along with Knitterblocker.  If not, see <http://www.gnu.org/licenses/>.
             }
         }
 
+        function clearNumbering() {
+            e.find("tr:last-child").remove();
+            e.find("th").remove();
+        }
+
         e.find("td").live('click', toggleCell);
         e.find(".add-row").click(function () {
+            clearNumbering();
             var width = e.find("tr:first-child td").size();
             var row = e.find(".grid").append("<tr></tr>");
             for (i = 0; i < width; i++) {
                 e.find("tr:last-child").append("<td style='background: white'></td>");
             }
+            addNumbering();
             canvas.trigger('paint');
         });
 
         e.find(".remove-row").click(function () {
+            clearNumbering();
             e.find("tr:last-child").remove();
+            addNumbering();
             canvas.trigger('paint');
         });
 
         e.find(".add-column").click(function () {
+            clearNumbering();
             e.find("tr").each(function () {
                 $(this).append("<td style='background: white'></td>");
             });
+            addNumbering();
             canvas.trigger('paint');
         });
 
         e.find(".remove-column").click(function () {
+            clearNumbering();
             e.find("tr td:last-child").each(function () {
                 $(this).remove();
             });
+            addNumbering();
             canvas.trigger('paint');
         });
 

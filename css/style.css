@@ -23,13 +23,18 @@ body {
 
 h1 { margin: 0 0 0.25em 0; color: #36f; text-align: center; }
 a { text-decoration: none }
+img { border: 0 }
 #canvas { 
    float: right; margin-right: 10px; border: 1px solid #bbb; 
    -webkit-box-shadow: 5px 5px 5px #bbb;
+   -moz-box-shadow: 5px 5px 5px #bbb;
 }
 
-#pattern .grid { margin: 0 auto; }
-#pattern td { width: 20px; height: 20px; border: 1px solid #bbb; }
+#pattern .grid { border-collapse: separate; margin: 0 auto; }
+#pattern td { 
+   width: 20px; height: 20px; 
+   border: 1px solid #bbb;
+}
 #pattern th { 
    font-weight: normal; font-size: small; color: #888;
 }
@@ -42,12 +47,15 @@ a { text-decoration: none }
    padding: 4px 10px;
    margin: 0 3px;
    font-weight: normal;
-   border-radius: 1em;
+   -webkit-border-radius: 1em;
+   -moz-border-radius: 1em;
    -webkit-box-shadow: 2px 2px 5px #ccc;
+   -moz-box-shadow: 2px 2px 5px #ccc;
    color: black;
 }
 #palette a.current { 
    font-weight: bold; 
    -webkit-box-shadow: 2px 2px 5px #333;
+   -moz-box-shadow: 2px 2px 5px #333;
 }
 
