@@ -33,7 +33,7 @@ along with Knitterblocker.  If not, see <http://www.gnu.org/licenses/>.
                     var cell = pattern.find("tr").get(y);
                     cell = $(cell).find("td").get(x);
                     palette[y] = palette[y] || [];
-                    palette[y][x] = $(cell).css("background");
+                    palette[y][x] = $(cell).css("background-color");
                 }
             }
 
@@ -56,14 +56,14 @@ along with Knitterblocker.  If not, see <http://www.gnu.org/licenses/>.
 (function ($) {
     $.fn.palette = function() {
         var e = $(this);
-        var current = e.find(".current").css("background");
+        var current = e.find(".current").css("background-color");
         e.data("current", current);
-        e.data("background", e.find("a:first-child").css("background"));
+        e.data("background-color", e.find("a:first-child").css("background-color"));
 
         e.find("a").click(function () {
             e.find("a").removeClass("current");
             $(this).addClass("current");
-            e.data("current", $(this).css("background"));
+            e.data("current", $(this).css("background-color"));
         });
 
         $(document).keypress(function (event) {
@@ -72,7 +72,7 @@ along with Knitterblocker.  If not, see <http://www.gnu.org/licenses/>.
                 var color = e.find("a").get(event.keyCode - 49);
                 e.find("a").removeClass("current");
                 $(color).addClass("current");
-                e.data("current", $(color).css("background"));
+                e.data("current", $(color).css("background-color"));
             }
         });
 
@@ -90,12 +90,12 @@ along with Knitterblocker.  If not, see <http://www.gnu.org/licenses/>.
         function toggleCell() {
             var cell = $(this);
             var color = palette.data("current");
-            var background = palette.data("background");
-            if (cell.css("background") == color) {
-                cell.css("background", background);
+            var background = palette.data("background-color");
+            if (cell.css("background-color") == color) {
+                cell.css("background-color", background);
             }
             else {
-                cell.css("background", color);
+                cell.css("background-color", color);
             }
             canvas.trigger('paint');
         }
@@ -155,13 +155,13 @@ along with Knitterblocker.  If not, see <http://www.gnu.org/licenses/>.
         });
 
         e.find(".clear-all").click(function () {
-            e.find("td").css("background", palette.data("background"));
+            e.find("td").css("background-color", palette.data("background-color"));
             canvas.trigger('paint');
         });
 
         e.find(".fill-color").click(function () {
             var color = palette.data("current");
-            e.find("td").css("background", color);
+            e.find("td").css("background-color", color);
             canvas.trigger('paint');
         });
 
