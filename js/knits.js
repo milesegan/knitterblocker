@@ -87,7 +87,7 @@ along with Knitterblocker.  If not, see <http://www.gnu.org/licenses/>.
         var e = $(this);
         var canvas = $(canvas);
 
-        function toggle_cell() {
+        function toggleCell() {
             var cell = $(this);
             var color = palette.data("current");
             var background = palette.data("background");
@@ -100,7 +100,19 @@ along with Knitterblocker.  If not, see <http://www.gnu.org/licenses/>.
             canvas.trigger('paint');
         }
 
-        e.find("td").live('click', toggle_cell);
+        function addNumbering() {
+            e.find("tr").each(function (i) {
+                $(this).prepend("<th>" + (i + 1) + "</th>");
+            });
+            var psizex = e.find("tr:first-child td").length;
+            var html = e.find("table").append("<tr></tr>");
+            html.append("<th></th>");
+            for (i = 0; i < psizex; i++) {
+                html.append("<th>" + (i + 1) + "</th>");
+            }
+        }
+
+        e.find("td").live('click', toggleCell);
         e.find(".add-row").click(function () {
             var width = e.find("tr:first-child td").size();
             var row = e.find(".grid").append("<tr></tr>");
@@ -139,7 +151,8 @@ along with Knitterblocker.  If not, see <http://www.gnu.org/licenses/>.
             e.find("td").css("background", color);
             canvas.trigger('paint');
         });
-                   
+
+        addNumbering();
         return this;
     };
 })(jQuery);
