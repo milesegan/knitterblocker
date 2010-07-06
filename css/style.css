@@ -27,7 +27,7 @@ a { text-decoration: none }
 img { border: 0 }
 #canvas { 
    float: right; margin-right: 10px; border: 1px solid #bbb; 
-   -webkit-box-shadow: 5px 5px 5px #bbb;
+   box-shadow: 5px 5px 5px #bbb;
    -moz-box-shadow: 5px 5px 5px #bbb;
 }
 
@@ -49,15 +49,15 @@ img { border: 0 }
    margin: 0 0.1em;
    font-weight: normal;
    font-size: 150%;
-   -webkit-border-radius: 1em;
+   border-radius: 1em;
+   box-shadow: 2px 2px 5px #ccc;
    -moz-border-radius: 1em;
-   -webkit-box-shadow: 2px 2px 5px #ccc;
    -moz-box-shadow: 2px 2px 5px #ccc;
    color: black;
 }
 #palette a.current { 
    font-weight: bold; 
-   -webkit-box-shadow: 2px 2px 5px #333;
+   box-shadow: 2px 2px 5px #333;
    -moz-box-shadow: 2px 2px 5px #333;
 }
 
